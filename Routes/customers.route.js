@@ -32,8 +32,7 @@ router.post("/login", async (req, res) => {
       const currentUser = {
         name: user[0].name,
         email: user[0].email,
-
-        isAdmin: user[0].isAdmin,
+        role: user[0].role,
         _id: user[0]._id,
       };
       res.send({ msg: "Succesful login...", currentUser });
