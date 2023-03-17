@@ -4,9 +4,9 @@ const User = require("../Models/user.models");
 const bcrypt = require("bcrypt");
 
 router.post("/register", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, role } = req.body;
 
-  const newUser = new User({ name, email, password });
+  const newUser = new User({ name, email, password, role });
 
   try {
     newUser.save((err, data) => {
